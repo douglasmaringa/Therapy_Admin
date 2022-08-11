@@ -93,6 +93,23 @@ export default function ProfileCard({data}) {
                      </LeadText>
                 </div>
             </CardBody>
+
+            <CardBody>
+                <div className="border-t border-lightBlue-200 text-center px-2 ">
+                    
+                    <LeadText color="blueGray">
+                        {data?.insurance[0]?.insuranceName != ""?(<>
+                          Insurance Name {data?.insurance[0]?.insuranceName}
+                          <br/>
+                          Insurance Number {data?.insurance[0]?.insuranceNumber}
+                          <img src={data?.insurance[0]?.insuranceImage} alt="" height={100}/>
+                        </>):(<>
+                         
+                        </>)}
+                    </LeadText>
+                </div>
+            </CardBody>
+
             <CardFooter>
                 <div className="w-full flex justify-center -mt-8">
                     <a
